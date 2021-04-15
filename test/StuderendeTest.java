@@ -10,6 +10,7 @@ class StuderendeTest {
   @BeforeEach
   private void setup() {
     studerende = new Studerende("Ib");
+
   }
 
 
@@ -40,5 +41,14 @@ class StuderendeTest {
 
   }
 
+  @Test
+  void getKarakterVægt() {
+
+    double expected = 9.25;
+
+    double actual = studerende.vægtetKarakter(7,10);
+
+    assertEquals(expected, actual);
+  }
 
 }

@@ -35,6 +35,5 @@ public class Studerende {
     vægtetKarakter += (karakter2 *0.75);
 
     return vægtetKarakter;
-
   }
 }
