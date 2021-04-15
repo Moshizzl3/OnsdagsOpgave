@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Main {
+
 private ArrayList<Studerende>elevliste = new ArrayList<>();
   Studerende student = new Studerende("Hans");
   Studerende student1 = new Studerende("Bo");
@@ -11,7 +12,7 @@ private ArrayList<Studerende>elevliste = new ArrayList<>();
   public static void main(String[] args) {
     Main main = new Main();
 
-    main.renderElever();
+    main.givEleverkarakterer();
     main.visListe();
 
 
@@ -24,7 +25,7 @@ private ArrayList<Studerende>elevliste = new ArrayList<>();
       }
     }
 
-    public void renderElever(){
+    public void givEleverkarakterer(){
       student.addKarakterer(2,2,2,2,2,2,2);
       student1.addKarakterer(2,2,2,2,2,2,2);
       elevliste.add(student);

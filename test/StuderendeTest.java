@@ -44,10 +44,13 @@ class StuderendeTest {
   @Test
   void getKarakterVægt() {
 
+    //Arrange
     double expected = 9.25;
 
+    //Act
     double actual = studerende.vægtetKarakter(7,10);
 
+    //Assert
     assertEquals(expected, actual);
   }
 
