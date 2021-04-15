@@ -15,6 +15,7 @@ private ArrayList<Studerende>elevliste = new ArrayList<>();
     main.visListe();
 
 
+
     }
     public void visListe()  {
       for (int i = 0; i < elevliste.size(); i++) {
@@ -26,6 +27,8 @@ private ArrayList<Studerende>elevliste = new ArrayList<>();
     public void renderElever(){
       student.addKarakterer(2,2,2,2,2,2,2);
       student1.addKarakterer(2,2,2,2,2,2,2);
+      elevliste.add(student);
+      elevliste.add(student1);
 
     }
 
