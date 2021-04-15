@@ -1,13 +1,22 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StuderendeTest {
 
+  private Studerende studerende;
+
+  @BeforeEach
+  private void setup() {
+    studerende = new Studerende("Ib");
+  }
+
+
   @Test
   void getNavn() {
     //Arrange
-    Studerende studerende = new Studerende("Ib");
+
     String expected = "Ib";
 
     //Act
@@ -17,4 +26,19 @@ class StuderendeTest {
     //Assert
     assertEquals(expected,actual);
   }
+
+  @Test
+  void getForkertNavn() {
+    //Arrange
+    String expected = "Lis";
+
+    //Act
+    String actual = studerende.getNavn();
+
+    //Assert
+    assertNotEquals(expected, actual);
+
+  }
+
+
 }
