@@ -1,12 +1,15 @@
-import Menu.Menu;
+package tools;
+
+import studerende.Studerende;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class EventManager {
 
-  private String[] menustuff = {"1. Opret en Studerende", "2. Giv studerende en karakter", "3. Udskriv karakter for en studerende", "9. Afslut"};
-  private Menu menu = new Menu("Menu", "Indtast valg: ", menustuff);
+  private String[] menustuff = {"1. Opret en studerende", "2. Giv studerende en karakter", "3. Udskriv karakter for en studerende", "9. Afslut"};
+  private UI UI = new UI("tools", "Indtast valg: ", menustuff);
   private Validation validation;
   private ArrayList<Studerende> studenterListe = new ArrayList<>();
 
@@ -14,8 +17,8 @@ public class EventManager {
     boolean quit = false;
 
     while (!quit){
-      menu.printMenu();
-      int choice = menu.readChoice();
+      UI.printMenu();
+      int choice = UI.readChoice();
 
       switch (choice){
         case 1:
@@ -51,16 +54,18 @@ public class EventManager {
     double[] karakterer = new double[7];
 
    for (int i = 0; i < karakterer.length ; i++) {
-      System.out.print("Skriv karatkter " + (i+1) + ": ");
-      karakterer[i] = new Validation().validateInteger();
+
       if (i == karakterer.length -1){
-        System.out.print("Indtast delKarakter 1: ");
+        System.out.print("Indtast delKarakter" + (i+1) + " 1: ");
         int k1 = new Validation().validateInteger();
-        System.out.print("Indtast delKarakter 2: ");
+        System.out.print("Indtast delKarakter" + (i+1) + " 2: ");
         int k2 = new Validation().validateInteger();
         double vk = vægtetKarakter(k1, k2);
         karakterer[i] = vk;
 
+      } else {
+        System.out.print("Skriv karatkter " + (i+1) + ": ");
+              karakterer[i] = new Validation().validateInteger();
       }
     }
     return karakterer;

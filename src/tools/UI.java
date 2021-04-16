@@ -1,15 +1,15 @@
-package Menu;
+package tools;
 
 import java.util.Scanner;
 
-public class Menu {
+public class UI {
 
   private String menuHeader;
   private String leadText;
   private String [] menuItems;
   private Scanner scanner = new Scanner(System.in);
 
-  public Menu(String menuHeader, String leadText, String [] menuItems){
+  public UI(String menuHeader, String leadText, String [] menuItems){
 
     this.menuHeader = menuHeader;
     this.leadText = leadText;

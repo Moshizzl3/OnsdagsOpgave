@@ -1,3 +1,4 @@
+package studerende;
 
 public class Studerende {
 
