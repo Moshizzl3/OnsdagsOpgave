@@ -2,7 +2,7 @@
 public class Studerende {
 
   private String navn;
-  private int [] karakterer = new int [7];
+  private double [] karakterer = new double[7];
 
   public Studerende(String navn) {
     this.navn = navn;
@@ -12,14 +12,8 @@ public class Studerende {
     return navn;
   }
 
-  public void addKarakterer(int a,int b,int c, int d ,int e, int f, int g) {  //Sende karakterer videre
-    karakterer[0] = a;
-    karakterer[1] = b;
-    karakterer[2] = c;
-    karakterer[3] = d;
-    karakterer[4] = e;
-    karakterer[5] = f;
-    karakterer[6] = g;
+  public void addKarakterer(double[] karakterer) {  //Sende karakterer videre
+    this.karakterer = karakterer;
   }
   public void visKarakterer() {
     for (int i = 0; i < karakterer.length; i++) {
@@ -30,8 +24,8 @@ public class Studerende {
 
   public double vægtetKarakter(int karakter1, int karakter2){
     double vægtetKarakter = 0;
-    vægtetKarakter += (karakter1*0.25);
-    vægtetKarakter += (karakter2 *0.75);
+    vægtetKarakter += (karakter1 * 0.25);
+    vægtetKarakter += (karakter2 * 0.75);
 
     return vægtetKarakter;
   }
