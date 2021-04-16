@@ -13,22 +13,23 @@ class StuderendeTest {
     studerende = new Studerende("Ib");
 
   }
+
   @Test
   void getNavn() {
-    //Arrange
 
+    //Arrange
     String expected = "Ib";
 
     //Act
     String actual = studerende.getNavn();
 
-
     //Assert
-    assertEquals(expected,actual);
+    assertEquals(expected, actual);
   }
 
   @Test
   void getForkertNavn() {
+
     //Arrange
     String expected = "Lis";
 
@@ -47,7 +48,7 @@ class StuderendeTest {
     double expected = 9.25;
 
     //Act
-    double actual = studerende.vægtetKarakter(7,10);
+    double actual = studerende.vægtetKarakter(7, 10);
 
     //Assert
     assertEquals(expected, actual);

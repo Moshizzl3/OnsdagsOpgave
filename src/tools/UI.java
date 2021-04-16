@@ -6,10 +6,10 @@ public class UI {
 
   private String menuHeader;
   private String leadText;
-  private String [] menuItems;
+  private String[] menuItems;
   private Scanner scanner = new Scanner(System.in);
 
-  public UI(String menuHeader, String leadText, String [] menuItems){
+  public UI(String menuHeader, String leadText, String[] menuItems) {
 
     this.menuHeader = menuHeader;
     this.leadText = leadText;
@@ -19,21 +19,21 @@ public class UI {
 
   // methods
 
-  public void printMenu(){
+  public void printMenu() {
 
     System.out.println(menuHeader);
-    for (String s: menuItems){
+    for (String s : menuItems) {
       System.out.println(s);
     }
     System.out.print(leadText);
 
   }
 
-  public int readChoice(){
+  public int readChoice() {
 
     int userInput;
 
-    while (!scanner.hasNextInt()){
+    while (!scanner.hasNextInt()) {
       System.out.print(leadText);
       scanner.hasNextInt();
       scanner.nextLine();

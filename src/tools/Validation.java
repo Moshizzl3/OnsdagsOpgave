@@ -30,7 +30,7 @@ public class Validation {
     int[] valideKarakterer = {-3, 00, 02, 4, 7, 10, 12};
 
     for (int i = 0; i < valideKarakterer.length; i++) {
-      if (input == valideKarakterer[i]){
+      if (input == valideKarakterer[i]) {
         return true;
       }
 
@@ -40,7 +40,7 @@ public class Validation {
   }
 
   //Valider om input til karakter er en korrekt karakter
-  public int validateKarakterInput(){
+  public int validateKarakterInput() {
 
     int userInput = validateInteger();
 
