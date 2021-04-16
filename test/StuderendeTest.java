@@ -12,8 +12,6 @@ class StuderendeTest {
     studerende = new Studerende("Ib");
 
   }
-
-
   @Test
   void getNavn() {
     //Arrange
