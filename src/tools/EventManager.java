@@ -57,15 +57,15 @@ public class EventManager {
 
       if (i == karakterer.length -1){
         System.out.print("Indtast delKarakter" + (i+1) + " 1: ");
-        int k1 = new Validation().validateInteger();
+        int k1 = new Validation().validateKarakterInput();
         System.out.print("Indtast delKarakter" + (i+1) + " 2: ");
-        int k2 = new Validation().validateInteger();
+        int k2 = new Validation().validateKarakterInput();
         double vk = vægtetKarakter(k1, k2);
         karakterer[i] = vk;
 
       } else {
-        System.out.print("Skriv karatkter " + (i+1) + ": ");
-              karakterer[i] = new Validation().validateInteger();
+        System.out.print("Skriv karakter " + (i+1) + ": ");
+              karakterer[i] = new Validation().validateKarakterInput();
       }
     }
     return karakterer;
