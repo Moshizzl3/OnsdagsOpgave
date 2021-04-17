@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class EventManager {
 
   private String[] menustuff = {"1. Opret en studerende", "2. Giv studerende en karakter", "3. Udskriv karakter for en studerende", "9. Afslut"};
-  private UI UI = new UI("tools", "Indtast valg: ", menustuff);
+  private UI UI = new UI("Menu", "Indtast valg: ", menustuff);
   private Validation validation;
   private ArrayList<Studerende> studenterListe = new ArrayList<>();
 
